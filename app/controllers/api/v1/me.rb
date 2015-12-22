@@ -11,7 +11,7 @@ module API
         }
         oauth2 # This endpoint requires authentication
         get '/' do
-          UserSerializer.new(current_user)
+          UserSerializer.new(current_resource_owner)
         end
 
         desc 'Update user, Protected, only accessible with write user'
@@ -28,13 +28,13 @@ module API
           declared_p = declared(params, include_missing: false)
           demo_value = declared_p.delete(:demo_value)
 
-          current_user.update_attributes(declared_p)
+          current_resource_owner.update_attributes(declared_p)
           result = {
-            id: current_user.id.to_s,
+            id: current_resource_owner.id.to_s,
             user: {
               value: demo_value,
-              email: current_user.email,
-              name: current_user.name
+              email: current_resource_owner.email,
+              name: current_resource_owner.name
             }
           }
         end

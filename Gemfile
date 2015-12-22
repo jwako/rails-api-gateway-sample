@@ -16,20 +16,28 @@ gem 'pg'
 gem 'simple_form'
 gem 'slim-rails'
 
+# OAuth2.0
 gem 'doorkeeper', '~> 2.2.2'
-gem 'wine_bouncer'
-gem 'kramdown'
-gem 'kaminari'
 gem 'grape'
+gem 'wine_bouncer'
 gem 'active_model_serializers'
 gem 'grape-active_model_serializers'
-gem 'grape-swagger'
-gem 'api-pagination'
-gem 'rack-cors', :require => 'rack/cors'
 
+# Documentation by swagger
+gem 'grape-swagger'
 # Temporarily remote branch because updates, for more info look at
 # https://github.com/d4be4st/swagger-ui_rails/pull/13
 gem 'swagger-ui_rails', github: 'audionerd/swagger-ui_rails'
+
+# pagination
+gem 'kaminari'
+gem 'api-pagination'
+
+# CORS
+gem 'rack-cors', :require => 'rack/cors'
+
+# Markdown
+gem 'kramdown'
 
 group :development do
   gem 'web-console', '~> 2.0'
