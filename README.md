@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Rails Api Gateway
 ================
 
@@ -46,3 +47,6 @@ Credits
 
 License
 -------
+=======
+# rails-api-gateway-sample
+>>>>>>> a52e329d70bfe69d3fb308654ca6bdef1d67826e
