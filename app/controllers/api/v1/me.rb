@@ -29,14 +29,7 @@ module API
           demo_value = declared_p.delete(:demo_value)
 
           current_resource_owner.update_attributes(declared_p)
-          result = {
-            id: current_resource_owner.id.to_s,
-            user: {
-              value: demo_value,
-              email: current_resource_owner.email,
-              name: current_resource_owner.name
-            }
-          }
+          UserSerializer.new(current_resource_owner)
         end
       end
 

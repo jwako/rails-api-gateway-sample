@@ -55,10 +55,11 @@ group :development do
 end
 
 group :development, :test do
-  gem 'byebug'
+  gem 'pry-byebug'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry-rails'
+  gem 'pry-doc'
   gem 'pry-rescue'
   gem 'rspec-rails'
   gem 'rubocop'

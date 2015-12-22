@@ -11,11 +11,14 @@ nav.navbar.navbar-default
     .collapse.navbar-collapse#headernav
       - if current_user.present?
         p.navbar-text.navbar-right
-          | Signed in as
+          = link_to 'Applications', oauth_applications_path
+          |  |  
+          = link_to 'Documentation', documentation_index_url
+          |  |  
+          | Signed in as 
           = link_to current_user.email, edit_user_registration_url, class: "navbar-link"
-          | \|
-          small
-            = link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-link"
+          |  |  
+          = link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-link"
             
       - else
         .navbar-text.navbar-right

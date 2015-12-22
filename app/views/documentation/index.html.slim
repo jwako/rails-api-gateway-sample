@@ -13,11 +13,11 @@ html
         .container
           form#api_selector.form
             .api-header-group.api-header-url
-              label  for: 'baseUrl'  
+              label for='baseUrl'  
                 | Grape Doorkeeper
-              input#input_baseUrl.form-control name="baseUrl" placeholder="https://bikeindex.org/api/v1" type="text" 
+              input#input_baseUrl.form-control name="baseUrl" placeholder="https://localhost:3000/api/v1" type="text" 
             .api-header-group.api-header-key
-              label  for: 'baseUrl'  
+              label for='baseUrl'
                 | API key
               input#input_apiKey.form-control name="apiKey" placeholder="api_key" type="text" 
             a#explore.btn.btn-primary href="#" 
@@ -43,8 +43,8 @@ html
               strong
                 | in query
               | as an <code>access_token</code> parameter, e.g.
-              a  href: "#"  
-                #{ENV['BASE_URL']}/api/v1/me?access_token=TOKEN_STRING
+              a href="#"  
+                = "#{ENV['BASE_URL']}/api/v1/me?access_token=TOKEN_STRING"
 
             hr
 

@@ -9,6 +9,14 @@ Bundler.require(*Rails.groups)
 module RailsApiGateway
   class Application < Rails::Application
 
+    config.middleware.insert_before "ActionDispatch::Static", "Rack::Cors" do
+      # Permit CORS from any origin, only in the API route
+      allow do
+        origins '*'
+        resource '/api/*', :headers => :any
+      end
+    end
+
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,

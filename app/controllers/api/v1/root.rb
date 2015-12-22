@@ -10,7 +10,7 @@ module API
       rescue_from :all do |e|
         eclass = e.class.to_s
         message = "OAuth error: #{e.to_s}" if eclass.match('WineBouncer::Errors')
-        status = case 
+        status = case
         when eclass.match('OAuthUnauthorizedError')
           401
         when eclass.match('OAuthForbiddenError')
@@ -30,7 +30,7 @@ module API
       end
 
       mount API::V1::Me
-      
+
       add_swagger_documentation base_path: "/api",
         api_version: 'v1',
         hide_format: true, # don't show .json
