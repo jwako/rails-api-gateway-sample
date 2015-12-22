@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-Rails Api Gateway
-================
 
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
@@ -49,4 +46,3 @@ License
 -------
 =======
 # rails-api-gateway-sample
->>>>>>> a52e329d70bfe69d3fb308654ca6bdef1d67826e
